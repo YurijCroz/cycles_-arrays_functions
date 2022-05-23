@@ -113,30 +113,6 @@ addsZeros(arrayNumbTest);
 
 function greatArrayConnector(arrayOne, arrayTwo) {
     let arrayNew=[]
-    function partOne(array) {
-        let i, j=arrayNew.length;
-        for(i=0;i<array.length;i++,j++){
-            arrayNew[j]=array[i];
-        }
-        return arrayNew;
-    }
-    partOne(arrayOne);
-    function partTwo(array) {
-        let i, j=arrayNew.length;
-        for(i=0;i<array.length;i++,j++){
-            arrayNew[j]=array[i];
-        }
-        return arrayNew;
-    }
-    partTwo(arrayTwo);
-    console.log(arrayNew);
-}
-//greatArrayConnector(arrayNumb, arrayNumbTwo);
-
-//6.2
-/* 
-function excellentArrayConnector(arrayOne, arrayTwo) {
-    let arrayNew=[]
     function arrayConnector(array) {
         let i, j=arrayNew.length;
         for(i=0;i<array.length;i++,j++){
@@ -148,8 +124,9 @@ function excellentArrayConnector(arrayOne, arrayTwo) {
     arrayConnector(arrayTwo);
     console.log(arrayNew);
 }
-excellentArrayConnector(arrayNumb, arrayNumbTwo);
- */
+greatArrayConnector(arrayNumb, arrayNumbTwo);
+
+//6.2
 
 function excellentArrayConnector(arrayArgument) {
     let arrayNew=[]
