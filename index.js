@@ -76,6 +76,7 @@ function sumOfOddArrayIndex(array) {
 let arrayNumbTwo=[12, 26, 0, 1.23, 35, 3, 57, 0, -23, 63, 9, 60];
 let arrayNumbThree=[12, 26, 0, 1.23, 35, 3, 57, 0, -23, 63, 9, 60];
 let arrayNumbFour=[12, 26, 0, 1.23, 35, 3, 57, 0, -23, 63, 9, 60];
+let arrayNumbTest=[-4.6,1,2,-3.3,44,5.0,6.0,-7,-8,-0.009,-0.00001,-0.0000011];
 
 function zeroingArrayElements(array, num=10) {
     let i;
@@ -92,20 +93,16 @@ function zeroingArrayElements(array, num=10) {
 //5 Напишите функцию, которая дополняет нулями целое число до оказанной длины.
 //Поработайте вариант с отрицательными числами. Например, fun(-4,6) вернет строку -000004
 
-let arrayNumbTest=[1,2,33,44,5.0,6.0,-7,-8,-0.009,-0.000010,-0.0000011];
-
-/*
-function addsZeros(array) {
-    let arrayNew= [...array];
-    for(let i=0;i<arrayNew.length;i++) {
-        if (arrayNew[i]<0);
-        arrayNew[i]+='00';
+function addsZeros(numb, amount=5) {
+    let zeroSymbol='0'.repeat(amount);
+    if (numb%1==0 && numb>0) {
+        console.log(zeroSymbol+numb);
+    } else if (numb%1==0 && numb<0) {
+        numb=Math.abs(numb);
+        console.log('-'+zeroSymbol+numb);
     }
-    console.log(arrayNew);
-    return arrayNew;
 }
-addsZeros(arrayNumbTest);
- */
+addsZeros(15,6);
 
 
 //6 соедините два массива в один большой
@@ -124,7 +121,7 @@ function greatArrayConnector(arrayOne, arrayTwo) {
     arrayConnector(arrayTwo);
     console.log(arrayNew);
 }
-greatArrayConnector(arrayNumb, arrayNumbTwo);
+//greatArrayConnector(arrayNumb, arrayNumbTwo);
 
 //6.2
 
@@ -143,7 +140,7 @@ function excellentArrayConnector(arrayArgument) {
     }
     console.log(arrayNew);
 }
-excellentArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
+//excellentArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
 
 
 
@@ -159,4 +156,4 @@ function cheatArrayConnector(arrayArgument) {
     }
     console.log(arrayNew);
 }
-cheatArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
+//cheatArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
