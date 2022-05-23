@@ -1,4 +1,4 @@
-//"use strict"
+"use strict"
 //Все задания оформить в виде функций: 
 //1 Вывести знак * столько раз сколько задаст пользователь
 function starSymbolOutput(howMany) {
@@ -145,3 +145,18 @@ function excellentArrayConnector(arrayArgument) {
 }
 excellentArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
 
+
+
+function cheatArrayConnector(arrayArgument) {
+    let arrayNew=[]
+    for(let i=0,j=0;i<arguments.length;i++) {
+        arrayConnector(arguments[j]);
+        j++;
+    }
+    function arrayConnector(array) {
+        arrayNew=arrayNew.concat(array);
+        return arrayNew;
+    }
+    console.log(arrayNew);
+}
+cheatArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
