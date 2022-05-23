@@ -9,10 +9,27 @@ function starSymbolOutput(howMany) {
     } else {
         howMany =1;
     }
+    let starSymbol='',i=0;
+    for(i;i<howMany;i++){
+        starSymbol+='*';
+    }
+    console.log(starSymbol);
+}
+starSymbolOutput(prompt('how many * to display in the console? If the result you entered is less than one or not a numeric character, then the default will be 1.'));
+
+
+function starSymbolOutputRepeat(howMany) {
+    if (howMany<1){
+        howMany=1;
+    } else if (howMany>0){
+        howMany;
+    } else {
+        howMany =1;
+    }
     let starSymbol='*'.repeat(howMany);
     console.log(starSymbol);
 }
-//starSymbolOutput(prompt('how many * to display in the console? If the result you entered is less than one or not a numeric character, then the default will be 1.'));
+//starSymbolOutputRepeat(prompt('how many * to display in the console? If the result you entered is less than one or not a numeric character, then the default will be 1.'));
 
 //2 Вывод чисел от limit1 до limit2, которые кратны num
 function outputNumbersFromAndTo(limit1=1, limit2=10, num=2) {
@@ -94,6 +111,21 @@ function zeroingArrayElements(array, num=10) {
 //Поработайте вариант с отрицательными числами. Например, fun(-4,6) вернет строку -000004
 
 function addsZeros(numb, amount=5) {
+    let zeroSymbol='',i=0;
+    for(i;i<amount;i++){
+        zeroSymbol+='0';
+    }
+    if (numb%1==0 && numb>0) {
+        console.log(zeroSymbol+numb);
+    } else if (numb%1==0 && numb<0) {
+        numb=Math.abs(numb);
+        console.log('-'+zeroSymbol+numb);
+    }
+}
+//addsZeros(15,6);
+
+
+function addsZerosRepeat(numb, amount=5) {
     let zeroSymbol='0'.repeat(amount);
     if (numb%1==0 && numb>0) {
         console.log(zeroSymbol+numb);
@@ -102,7 +134,7 @@ function addsZeros(numb, amount=5) {
         console.log('-'+zeroSymbol+numb);
     }
 }
-addsZeros(15,6);
+//addsZerosRepeat(15,6);
 
 
 //6 соедините два массива в один большой
