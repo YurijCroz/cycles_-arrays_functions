@@ -1,4 +1,4 @@
-"use strict"
+//"use strict"
 //Все задания оформить в виде функций: 
 //1 Вывести знак * столько раз сколько задаст пользователь
 function starSymbolOutput(howMany) {
@@ -74,6 +74,8 @@ function sumOfOddArrayIndex(array) {
 
 //4 Обнулите все элементы массива меньше 10
 let arrayNumbTwo=[12, 26, 0, 1.23, 35, 3, 57, 0, -23, 63, 9, 60];
+let arrayNumbThree=[12, 26, 0, 1.23, 35, 3, 57, 0, -23, 63, 9, 60];
+let arrayNumbFour=[12, 26, 0, 1.23, 35, 3, 57, 0, -23, 63, 9, 60];
 
 function zeroingArrayElements(array, num=10) {
     let i;
@@ -129,10 +131,10 @@ function greatArrayConnector(arrayOne, arrayTwo) {
     partTwo(arrayTwo);
     console.log(arrayNew);
 }
-greatArrayConnector(arrayNumb, arrayNumbTwo);
+//greatArrayConnector(arrayNumb, arrayNumbTwo);
 
 //6.2
-
+/* 
 function excellentArrayConnector(arrayOne, arrayTwo) {
     let arrayNew=[]
     function arrayConnector(array) {
@@ -147,5 +149,22 @@ function excellentArrayConnector(arrayOne, arrayTwo) {
     console.log(arrayNew);
 }
 excellentArrayConnector(arrayNumb, arrayNumbTwo);
+ */
 
+function excellentArrayConnector(arrayArgument) {
+    let arrayNew=[]
+    for(let i=0,j=0;i<arguments.length;i++) {
+        arrayConnector(arguments[j]);
+        j++;
+    }
+    function arrayConnector(array) {
+        let i, j=arrayNew.length;
+        for(i=0;i<array.length;i++,j++){
+            arrayNew[j]=array[i];
+        }
+        return arrayNew;
+    }
+    console.log(arrayNew);
+}
+excellentArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
 
