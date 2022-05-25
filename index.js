@@ -1,6 +1,7 @@
 "use strict"
 //Все задания оформить в виде функций: 
 //1 Вывести знак * столько раз сколько задаст пользователь
+
 function starSymbolOutput(howMany) {
     if (howMany<1){
         howMany=1;
@@ -15,7 +16,7 @@ function starSymbolOutput(howMany) {
     }
     console.log(starSymbol);
 }
-starSymbolOutput(prompt('how many * to display in the console? If the result you entered is less than one or not a numeric character, then the default will be 1.'));
+//starSymbolOutput(prompt('how many * to display in the console? If the result you entered is less than one or not a numeric character, then the default will be 1.'));
 
 
 function starSymbolOutputRepeat(howMany) {
@@ -176,16 +177,16 @@ function excellentArrayConnector(arrayArgument) {
 
 
 
-function cheatArrayConnector(arrayArgument) {
+function cheatExcellentArrayConnector(arrayArgument) {
     let arrayNew=[]
-    for(let i=0,j=0;i<arguments.length;i++) {
-        arrayConnector(arguments[j]);
-        j++;
-    }
+    Object.keys(arguments).forEach((key) => {
+        arrayConnector(arguments[key]);
+        key++;
+    })
     function arrayConnector(array) {
         arrayNew=arrayNew.concat(array);
         return arrayNew;
     }
     console.log(arrayNew);
 }
-//cheatArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
+//cheatExcellentArrayConnector(arrayNumb, arrayNumbTwo, arrayNumbTest, arrayNumbThree, arrayNumbFour);
